@@ -255,10 +255,10 @@ observador.observe(elementoQuemSomos);
 observador.observe(elementoContato);
 
 //
-const elementosLinksNavbar = document.querySelectorAll("nav .container .offcanvas .offcanvas-body ul li");
+const elementosLiNavbar = document.querySelectorAll("nav .container .offcanvas .offcanvas-body ul li, nav .container .offcanvas .offcanvas-body ul li a");
 const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(document.querySelector("#offcanvas-navbar"));
 
-elementosLinksNavbar.forEach((elemento) => {
+elementosLiNavbar.forEach((elemento) => {
     elemento.addEventListener("click", function() {
         if (document.body.clientWidth <= 991) {
             offcanvas.hide();
