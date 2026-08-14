@@ -1,0 +1,832 @@
+/* BANNER */
+#banner {
+    display: flex;
+    position: relative;
+    height: 660px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/Banner-Pessoas-Em-Reuniao.jpg");
+}
+
+#banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(54, 71, 89, 0.45) 0%,
+        rgba(54, 71, 89, 0.68) 25%,
+        rgba(46, 60, 75, 0.88) 60%,
+        rgba(46, 60, 75, 1) 100%
+    );
+}
+
+#banner .container {
+    z-index: 1;
+    margin: auto;
+}
+
+#banner .container,
+#solucoes .container,
+#como-trabalhamos .container,
+#quem-somos .container,
+#contato .container {
+    width: 93%;
+    max-width: 1140px;
+}
+
+#banner .container h1 {
+    color: var(--branco);
+    font-size: 66px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#banner .container h1:first-of-type {
+    margin-bottom: -10px;
+}
+
+#banner .container p {
+    width: 60%;
+    color: var(--branco);
+    font-size: 22px;
+    margin: 23px 0 30px 0;
+}
+
+#banner .container a:first-of-type {
+    margin-right: 8px;
+}
+
+#banner .container a button,
+#solucoes .container a button,
+#contato .container .container-lados .lado-direito form button {
+    padding: 14px 33px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 100px;
+}
+
+#banner .container a:first-of-type button {
+    color: var(--branco);
+    background-color: var(--azul-complementar);
+}
+
+#banner .container a:first-of-type:hover button {
+    background-color: var(--azul-complementar-2);
+    transform: scale(1.03);
+    box-shadow: var(--sombra-branco-2);
+}
+
+#banner .container a:last-of-type button,
+#solucoes .container a button {
+    color: var(--cinza);
+    border: 3px solid var(--azul-institucional-3);
+    background: none;
+}
+
+#banner .container a:last-of-type:hover button,
+#solucoes .container a:hover button {
+    color: var(--azul-complementar-2);
+    border: 3px solid var(--azul-complementar-2);
+    transform: scale(1.03);
+    box-shadow: var(--sombra-branco-2);
+}
+
+/* SOLUÇÕES */
+#solucoes,
+#quem-somos {
+    background-color: rgba(46, 60, 75, 1);
+}
+
+#solucoes .container,
+#quem-somos .container {
+    display: flex;
+    flex-direction: column;
+    padding: 104px 0 114px 0;
+}
+
+#solucoes .container h2,
+#solucoes .container p,
+#quem-somos .container h2,
+#quem-somos .container p {
+    color: var(--branco);
+}
+
+#como-trabalhamos .container span:not(.etapa span),
+#solucoes .container span:not(.solucao span),
+#quem-somos .container span:not(.caracteristica span),
+#contato .container span {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#solucoes .container span:not(.solucao span)::after,
+#quem-somos .container span:not(.solucao span)::after {
+    background-color: var(--azul-institucional);
+}
+
+#como-trabalhamos .container span:not(.etapa span)::after,
+#solucoes .container span:not(.solucao span)::after,
+#quem-somos .container span:not(.solucao span)::after,
+#contato .container span::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+}
+
+#solucoes .container h2,
+#como-trabalhamos .container h2,
+#quem-somos .container h2,
+#contato .container h2 {
+    font-size: 44px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+#solucoes .container span:not(.solucao span),
+#quem-somos .container span:not(.caracteristica span) {
+    color: var(--cinza);
+}
+
+#solucoes .container span:not(.solucao span)::after,
+#quem-somos .container span:not(.caracteristica span)::after {
+    background-color: var(--cinza);
+}
+
+#solucoes .container p:first-of-type:not(.solucao p),
+#como-trabalhamos .container p:not(.etapa p),
+#quem-somos .container p:not(.caracteristica p),
+#contato .container p {
+    font-size: 18px;
+}
+
+#solucoes .container p:last-of-type:not(.solucao p) {
+    font-size: 14px;
+    text-align: center;
+}
+
+#solucoes .container #lista-solucoes,
+#quem-somos .container #lista-caracteristicas {
+    margin-top: 22px;
+    margin-bottom: 30px;
+}
+
+#solucoes .container #lista-solucoes .col:nth-child(1), #solucoes .container #lista-solucoes .col:nth-child(2), #solucoes .container #lista-solucoes .col:nth-child(3), #solucoes .container #lista-solucoes .col:nth-child(4), #solucoes .container #lista-solucoes .col:nth-child(5), #solucoes .container #lista-solucoes .col:nth-child(6) {
+    margin-bottom: 22px;
+}
+
+#solucoes .container #lista-solucoes .col:nth-child(7), #solucoes .container #lista-solucoes .col:nth-child(8) {
+    width: 50%;
+}
+
+#solucoes .container #lista-solucoes .solucao,
+#quem-somos .container #lista-caracteristicas .caracteristica {
+    height: 100%;
+    padding: 22px 25px 32px 25px;
+    border-radius: 10px;
+    border: 2px solid var(--azul-institucional);
+    box-shadow: var(--sombra-preto-2);
+}
+
+#solucoes .container #lista-solucoes .solucao:hover,
+#quem-somos .container #lista-caracteristicas .caracteristica:hover {
+    box-shadow: var(--sombra-preto);
+    transform: scale(1.02) translateY(-4px);
+}
+
+#solucoes .container #lista-solucoes .solucao header,
+#quem-somos .container #lista-caracteristicas .caracteristica header {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#solucoes .container #lista-solucoes .solucao header .lado-esquerdo i,
+#quem-somos .container #lista-caracteristicas .caracteristica header i {
+    display: flex;
+    color: var(--branco);
+    font-size: 30px;
+    padding: 14px;
+    border: 2px solid var(--azul-institucional);
+    border-radius: 10px;
+    background-color: var(--azul-institucional-4)
+}
+
+#solucoes .container #lista-solucoes .solucao header .lado-direito {
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    justify-content: center;
+}
+
+#solucoes .container #lista-solucoes .solucao header .lado-direito h3,
+#quem-somos .container #lista-caracteristicas .caracteristica h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--branco);
+    margin: 0 0 4px 0;
+}
+
+#solucoes .container #lista-solucoes .solucao header .lado-direito span {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--laranja);
+}
+
+#solucoes .container #lista-solucoes .solucao p,
+#como-trabalhamos .container #lista-etapas .etapa article p,
+#quem-somos .container #lista-caracteristicas .caracteristica p {
+    font-size: 14px;
+    margin: 0;
+}
+
+#solucoes .container a {
+    margin: auto;
+}
+
+/* COMO TRABALHAMOS */
+#como-trabalhamos,
+#contato {
+    background-color: var(--branco);
+}
+
+#como-trabalhamos .container,
+#contato .container {
+    padding: 104px 0 114px 0;
+}
+
+#como-trabalhamos .container span:not(.etapa span),
+#contato .container span {
+    color: var(--azul-institucional-3);
+}
+
+#como-trabalhamos .container span:not(.etapa span)::after,
+#contato .container span::after {
+    background-color: var(--azul-institucional-3);
+}
+
+#como-trabalhamos .container h2,
+#contato .container h2 {
+    color: var(--azul-institucional-4);
+}
+
+#como-trabalhamos .container p:not(.etapa p),
+#contato .container p {
+    color: var(--preto);
+}
+
+#como-trabalhamos .container #lista-etapas {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 64px;
+}
+
+#como-trabalhamos .container #lista-etapas::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: var(--azul-complementar);
+    border-radius: 20px;
+    z-index: 0;
+}
+
+#como-trabalhamos .container #lista-etapas .etapa {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#como-trabalhamos .container #lista-etapas .etapa::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 35px;
+    left: 50%;
+    top: 64px;
+    transform: translateX(-50%);
+    background-color: var(--azul-complementar);
+}
+
+#como-trabalhamos .container #lista-etapas .etapa .numero {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--branco);
+    background-color: var(--azul-institucional-2);
+    border-radius: 50%;
+    box-shadow: var(--sombra-branco-2);
+}
+
+#como-trabalhamos .container #lista-etapas .etapa .numero:hover,
+#como-trabalhamos .container #lista-etapas .etapa:has(article:hover) .numero {
+    transform: scale(1.06);
+    color: var(--branco);
+    background-color: var(--azul-institucional-3);
+}
+
+#como-trabalhamos .container #lista-etapas .etapa .numero:hover ~ article,
+#como-trabalhamos .container #lista-etapas .etapa:has(article:hover) article {
+    transform: scale(1.02);
+    box-shadow: var(--sombra-preto);
+}
+
+#como-trabalhamos .container #lista-etapas .etapa article {
+    flex: 1;
+    margin-top: 12px;
+    padding: 22px 25px 32px 25px;
+    border-radius: 10px;
+    border: 1px solid var(--cinza);
+    background-color: var(--branco);
+    box-shadow: var(--sombra-preto-2);
+}
+
+#como-trabalhamos .container #lista-etapas .etapa article span {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 700;
+    color: var(--laranja);
+}
+
+#como-trabalhamos .container #lista-etapas .etapa article h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--azul-institucional-4);
+}
+
+#como-trabalhamos .container #lista-etapas .etapa article p {
+    color: var(--preto);
+}
+
+/* Quem somos */
+#quem-somos .container .container-lados,
+#contato .container .container-lados {
+    display: flex;
+}
+
+#quem-somos .container .container-lados .lado-esquerdo,
+#quem-somos .container .container-lados .lado-direito {
+    width: 50%;
+}
+
+#quem-somos .container .container-lados .lado-esquerdo img {
+    width: 100%;
+    height: calc(100% - 20px);
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 2px solid var(--azul-institucional);
+    box-shadow: var(--sombra-preto-2);
+}
+
+#quem-somos .container .container-lados .lado-esquerdo img:hover {
+    box-shadow: var(--sombra-preto);
+    transform: scale(1.002) translateY(-4px);
+}
+
+#quem-somos .container .container-lados .lado-direito {
+    padding-left: 66px;
+    margin-top: 22px;
+}
+
+#quem-somos .container #lista-caracteristicas .caracteristica {
+    padding-top: 33px;
+    text-align: center;
+}
+
+#quem-somos .container #lista-caracteristicas .caracteristica header i {
+    padding: 22px;
+    padding-left: 24px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#quem-somos .container #lista-caracteristicas .caracteristica h3 {
+    margin-bottom: 6px;
+}
+
+/* CONTATO */
+#contato .container .container-lados .lado-esquerdo {
+    width: 38%;
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col {
+    display: flex;
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col p {
+    margin: auto 0;
+}
+
+#contato .container .container-lados .lado-esquerdo .row:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col i {
+    font-size: 24px;
+    padding: 4px 10px 7px 12px;
+    margin-right: 12px;
+    color: var(--azul-institucional);
+    border: 1px solid var(--cinza-2);
+    border-radius: 10px;
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col:hover {
+    transform: scale(1.01);
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col a {
+    display: flex;
+    color: var(--linkedin-2);
+    text-decoration: none;
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col a:hover {
+    font-weight: bold;
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col a:hover i.bi-envelope,
+#contato .container .container-lados .lado-esquerdo .row:nth-child(2) .col a:hover p {
+    color: var(--email);
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col a:hover i.bi-instagram,
+#contato .container .container-lados .lado-esquerdo .row:nth-child(3) .col a:hover p {
+    color: var(--instagram);
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col a:hover i.bi-facebook,
+#contato .container .container-lados .lado-esquerdo .row:nth-child(4) .col a:hover p {
+    color: var(--facebook);
+}
+
+#contato .container .container-lados .lado-esquerdo .row .col a:hover i.bi-linkedin,
+#contato .container .container-lados .lado-esquerdo .row:nth-child(5) .col a:hover p {
+    color: var(--linkedin);
+}
+
+#contato .container .container-lados .lado-direito {
+    width: 66%;
+    margin-left: 55px;
+    border: 1px solid var(--cinza);
+    padding: 30px 36px;
+    border-radius: 10px;    
+    background-color: var(--branco);
+    box-shadow: var(--sombra-preto-2);
+}
+
+#contato .container .container-lados .lado-direito form .row {
+    margin-top: 12px;
+}
+
+#contato .container .container-lados .lado-direito form input,
+#contato .container .container-lados .lado-direito form select,
+#contato .container .container-lados .lado-direito form textarea {
+    padding: 6px 12px;
+    border: 1px solid var(--cinza-2);
+    transition: 0.2s ease-in-out;
+}
+
+#contato .container .container-lados .lado-direito form input:focus,
+#contato .container .container-lados .lado-direito form select:focus,
+#contato .container .container-lados .lado-direito form textarea:focus {
+    outline: none;
+    border-color: var(--azul-institucional-3);
+    box-shadow: 0 0 0 0.15rem var(--sombra-preto-2);
+    transform: scale(1.01);
+}
+
+#contato .container .container-lados .lado-direito form textarea {
+    resize: none;
+}
+
+#contato .container .container-lados .lado-direito form button {
+    width: 100%;
+    color: var(--branco);
+    margin-top: 18px;
+    background-color: var(--laranja);
+}
+
+#contato .container .container-lados .lado-direito form button:hover {
+    background-color: var(--laranja-2);
+    transform: scale(1.02);
+    box-shadow: var(--sombra-branco-2);
+}
+
+/* Ícones fixos */
+#icone-topo,
+#icone-whatsapp {
+    z-index: 2;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: var(--sombra-branco-2);
+}
+
+/* Ícone para voltar ao topo */
+#icone-topo {
+    display: none;
+    justify-content: center;
+    color: var(--branco);
+    padding-top: 3px;
+    bottom: 75px;
+    right: 10px;
+    background-color: var(--azul-institucional);
+}
+
+#icone-topo,
+#icone-whatsapp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#icone-topo i {
+    font-size: 27px;
+}
+
+/* Ícone WhatsApp */
+#icone-whatsapp {
+    bottom: 10px;
+    right: 10px;
+}
+
+#icone-topo:hover,
+#icone-whatsapp:hover {
+    transform: scale(1.07);
+    box-shadow: var(--sombra-branco);
+}
+
+/* Responsividade */
+@media screen and (max-width: 1098px) {
+    #banner .container p {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1095.9px) {
+    #como-trabalhamos .container #lista-etapas .etapa::before,
+    #como-trabalhamos .container #lista-etapas .etapa .numero,
+    #como-trabalhamos .container #lista-etapas .etapa .barra {
+        display: none;
+    }
+    
+    #como-trabalhamos .container #lista-etapas::before {
+        background: none;
+    }
+
+    #como-trabalhamos .container #lista-etapas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 18px;
+        margin-top: 22px;
+    }
+
+    #como-trabalhamos .container #lista-etapas .etapa article {
+        padding: 32px 32px 40px 32px;
+    }
+
+    #quem-somos .container .container-lados {
+        flex-direction: column;
+    }
+
+    #quem-somos .container .container-lados .lado-direito {
+        width: 100%;
+        order: 1;
+        padding-left: 0;
+    }
+
+    #quem-somos .container .container-lados .lado-esquerdo {
+        width: 100%;
+        order: 2;
+    }
+
+    #contato .container .container-lados {
+        flex-direction: column;
+    }
+    
+    #contato .container .container-lados .lado-esquerdo,
+    #contato .container .container-lados .lado-direito {
+        width: 100%;
+    }
+
+    #contato .container .container-lados .lado-direito {
+        margin-top: 55px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 991.9px) {
+    #quem-somos .container #lista-caracteristicas .col:nth-child(3) {
+        width: 100%;
+        margin-top: 22px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    #banner .container p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 808px) {
+    #banner .container h1 {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 794px) {
+    #solucoes .container #lista-solucoes .solucao header .lado-direito h3,
+    #como-trabalhamos .container #lista-etapas .etapa article h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    #solucoes .container #lista-solucoes .col,
+    #solucoes .container #lista-solucoes .col:nth-child(7),
+    #solucoes .container #lista-solucoes .col:nth-child(8),
+    #quem-somos .container #lista-caracteristicas .col {
+        width: 100%;
+    }
+    
+    #quem-somos .container #lista-caracteristicas .col:nth-child(2) {
+        margin-top: 22px;
+    }
+    
+    #solucoes .container #lista-solucoes .col:nth-child(7) {
+        margin-bottom: 22px;
+    }
+
+    #como-trabalhamos .container #lista-etapas {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #contato .container .container-lados .lado-direito form .row:first-of-type {
+        flex-direction: column;
+    }
+    
+    #contato .container .container-lados .lado-direito form .row:first-of-type .col:last-of-type {
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 677.9px) {
+    #banner .container h1 {
+        font-size: 44px;
+    }
+    
+    #banner .container p {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    #solucoes .container p:first-of-type:not(.solucao p),
+    #como-trabalhamos .container p:not(.etapa p) {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    #banner .container p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 558px) {
+    #banner .container a:first-of-type {
+        margin-right: 0;
+    }
+
+    #banner .container a button,
+    #solucoes .container a,
+    #solucoes .container a button {
+        width: 100%;
+    }
+
+    #banner .container a button:first-of-type {
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 546px) {
+    #banner .container h1,
+    #solucoes .container h2,
+    #como-trabalhamos .container h2 {
+        font-size: 36px;
+    }
+
+    #banner .container p {
+        font-size: 16px;
+        margin: 9px 0 18px 0;
+    }
+
+    #solucoes .container p:first-of-type:not(.solucao p),
+    #como-trabalhamos .container p:not(.etapa p),
+    #contato .container p {
+        font-size: 16px;
+    }
+    
+    #banner .container a button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 452px) {
+    #banner .container h1,
+    #solucoes .container h2,
+    #como-trabalhamos .container h2 {
+        font-size: 30px;
+    }
+
+    #banner .container h1:first-of-type {
+        margin-bottom: -4px;
+    }
+
+    #banner .container a button {
+        padding: 10px 0;
+    }
+
+    #contato .container .container-lados .lado-direito {
+        padding: 20px 24px 28px 24px;
+    }
+}
+
+@media screen and (max-width: 381.9px) {
+    #banner .container h1,
+    #solucoes .container h2,
+    #como-trabalhamos .container h2 {
+        font-size: 25px;
+    }
+    
+    #banner .container h1:first-of-type {
+        margin-bottom: 0;
+    }
+
+    #banner .container p,
+    #solucoes .container p:first-of-type:not(.solucao p) {
+        font-size: 14px;
+    }
+
+    #solucoes .container p:last-of-type:not(.solucao p) {
+        font-size: 12px;
+    }
+    
+    #banner .container a button {
+        font-size: 12px;
+    }
+
+    #contato .container .container-lados .lado-direito {
+        padding: 20px 15px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #solucoes .container #lista-solucoes .solucao header .lado-direito span {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #solucoes .container #lista-solucoes .solucao {
+        padding: 20px;
+    }
+
+    #solucoes .container #lista-solucoes .solucao header .lado-direito {
+        margin-left: 12px;
+    }
+    
+    #solucoes .container #lista-solucoes .solucao header .lado-esquerdo i {
+        font-size: 22px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 322px) {
+    #banner .container h1,
+    #solucoes .container h2,
+    #como-trabalhamos .container h2 {
+        font-size: 22px;
+    }
+    
+    #banner .container a button {
+        padding: 8px 0;
+    }
+
+    #quem-somos .container .container-lados .lado-esquerdo img {
+        height: 300px;
+    }
+}

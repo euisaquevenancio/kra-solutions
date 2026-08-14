@@ -1,0 +1,220 @@
+@import url("root.css");
+
+header .container,
+nav .container {
+    max-width: 1140px;
+    width: 93%;
+}
+
+/**/
+header:not(div header){
+    background-color: var(--azul-institucional-2);
+}
+
+header .container {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+}
+
+header .container p {
+    margin: auto 0;
+    font-size: 15px;
+}
+
+header .container p span {
+    font-weight: bold;
+}
+
+header .container p,
+header .container p a:hover {
+    color: var(--branco);
+}
+
+header .container a {
+    color: var(--cinza);
+}
+
+header .container ul {
+    margin: auto 0;
+}
+
+header .container ul li:not(:first-of-type) {
+    margin-left: 14px;
+}
+
+header .container ul li a i {
+    font-size: 17px;
+}
+
+header .container ul li a i.bi-envelope:hover {
+    color: var(--email);
+}
+
+header .container ul li a i.bi-instagram:hover {
+    color: var(--instagram);
+}
+
+header .container ul li a i.bi-facebook:hover {
+    color: var(--facebook);
+}
+
+header .container ul li a i.bi-linkedin:hover {
+    color: var(--linkedin);
+}
+
+/**/
+nav {
+    border-bottom: 2px solid var(--azul-institucional-2);
+    background-color: var(--azul-institucional);
+}
+
+nav .container {
+    display: flex;
+    height: 92px;
+}
+
+nav .container a {
+    margin: auto 0;
+}
+
+nav .container a img {
+    height: 50px;
+    width: 120px;
+}
+
+nav .container button {
+    display: none;
+    padding: 0;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 10px;
+    background-color: var(--azul-institucional-2);
+}
+
+nav .container button i {
+    color: var(--cinza);
+    font-size: 22px;
+}
+
+nav .container .offcanvas .offcanvas-header {
+    padding: 28px 22px;
+    background-color: var(--azul-institucional-2);
+}
+
+nav .container .offcanvas .offcanvas-header .offcanvas-titulo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav .container .offcanvas .offcanvas-header .offcanvas-titulo img {
+    height: 40px;
+    width: 100px;
+}
+
+nav .container .offcanvas .offcanvas-header .offcanvas-titulo i {
+    color: var(--cinza);
+    font-size: 22px;
+    border-radius: 7px;
+    padding: 4px 10px;
+    margin: auto 0;
+    background-color: var(--azul-institucional);
+}
+
+nav .container button:hover,
+nav .container button:hover i,
+nav .container .offcanvas .offcanvas-header .offcanvas-titulo i:hover {
+    transform: scale(1.08);
+    color: var(--branco);
+}
+
+nav .container .offcanvas .offcanvas-body {
+    margin-left: auto;
+}
+
+nav .container .offcanvas .offcanvas-body ul li:not(:first-of-type) {
+    margin-left: 18px;
+}
+
+nav .container .offcanvas .offcanvas-body ul li a {
+    color: var(--cinza);
+    padding: 0;
+}
+
+nav .container .offcanvas .offcanvas-body ul li a:hover {
+    color: var(--branco);
+}
+
+nav .container .offcanvas .offcanvas-footer {
+    display: none;
+    padding: 22px 0;
+    text-align: center;
+    background-color: var(--azul-institucional);
+}
+
+nav .container .offcanvas .offcanvas-footer p {
+    font-size: 13px;
+    margin: 0;
+    color: var(--cinza);
+}
+
+@media screen and (max-width: 991.9px) {
+    nav .container button {
+        display: flex;
+    }
+
+    nav .container .offcanvas .offcanvas-body {
+        width: 100%;
+        padding: 22px;
+    }
+
+    nav .container .offcanvas .offcanvas-body ul li {
+        width: 100%;
+        padding: 12px 18px;
+        border: 1px solid var(--cinza);
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    nav .container .offcanvas .offcanvas-body ul li:hover {
+        font-weight: bold;
+        transform: scale(1.02);
+    }
+
+    nav .container .offcanvas .offcanvas-body ul li:not(:first-of-type) {
+        margin-left: 0;
+    }
+
+    nav .container .offcanvas .offcanvas-body ul li a,
+    nav .container .offcanvas .offcanvas-body ul li a:hover {
+        color: var(--azul-institucional);
+    }
+
+    nav .container .offcanvas .offcanvas-footer {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    header .container {
+        height: 55px;
+    }
+
+    header .container p {
+        display: none;
+    }
+
+    header .container ul {
+        margin: auto;
+    }
+
+    nav .container {
+        height: 62px;
+    }
+
+    nav .container a img {
+        height: 40px;
+        width: 100px;
+    }
+}

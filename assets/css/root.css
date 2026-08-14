@@ -1,0 +1,54 @@
+:root {
+    /* TIPOGRAFIA */
+    --tamanho-fonte: 16px;
+    --altura-linha: 1.45;
+
+    /* CORES */
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --cinza: #C4C4C4;
+    --cinza-2: #AFC1D5;
+    --azul-institucional: #364759;
+    --azul-institucional-2: #2E3C4B;
+    --azul-institucional-3: #41556A;
+    --azul-institucional-4: #314152;
+    --azul-complementar: #7593A4;
+    --azul-complementar-2: #87A9BC;
+    --laranja: #E69241;
+    --laranja-2: #CA782C;
+    --terracota: #AC4623;
+    --email: #AB3429;
+    --instagram: #C13584;
+    --facebook: #3381e8;
+    --linkedin: #329DDB;
+    --linkedin-2: #225A8E;
+    
+    /* SOMBRAS */
+    --sombra-preto: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --sombra-preto-2: rgba(0, 0, 0, 0.25) 0px 2px 8px;
+    --sombra-branco: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    --sombra-branco-2: rgba(255, 255, 255, 0.15) 0px 5px 10px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-size: var(--tamanho-fonte);
+    line-height: var(--altura-linha);
+}
+
+* {
+    transition: 0.2s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
