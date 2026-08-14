@@ -253,3 +253,15 @@ observador.observe(elementoSolucoes);
 observador.observe(elementoComoTrabalhamos);
 observador.observe(elementoQuemSomos);
 observador.observe(elementoContato);
+
+//
+const elementosLinksNavbar = document.querySelectorAll("nav .container .offcanvas .offcanvas-body ul li");
+const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(document.querySelector("#offcanvas-navbar"));
+
+elementosLinksNavbar.forEach((elemento) => {
+    elemento.addEventListener("click", function() {
+        if (document.body.clientWidth <= 991) {
+            offcanvas.hide();
+        }
+    });
+});
